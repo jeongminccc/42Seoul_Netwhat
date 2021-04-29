@@ -346,8 +346,29 @@ IP 주소 할당 절차에 사용되는 DHCP 메시지는 아래 그림과 같�
 
 <center><img src="https://www.netmanias.com/ko/?m=attach&no=1987"></img></center><br/>
 
-1. DHCP Discover
-ㄴㅇㅁㄴㅇ
+#### 1) DHCP Discover
+
+클라이언트 -> DHCP 서버, 브로드캐스트 패킷(목적지 MAC = FF:FF:FF:FF:FF:FF)을 보낸다.  
+
+__클라이언트가 DHCP 서버를 찾기위한 메시지__, 그래서 LAN상에(동일 서브넷) 브로드캐스팅을 하여 DHCP 서버의 응답을 바란다. 이 Discover 패킷에는 IP주소가 필요한 호스트의 MAC 주소가 담겨져 있어서 DHCP 서버가 응답할 떄 패킷을 수신할 수 있게 된다.
+
+#### 2) DHCP Offer
+
+DHCP 서버 -> 클라이언트, 브로드캐스트 메시지 혹은 유니캐스트를 보낸다. 이는 클라이언트가 보낸 DHCP Discover 메시지 내의 브로드캐스트 Flag의 값에 따라 달라지는데, Flag=1이면 DHCP 서버는 DHCP Offer메시지를 Broadcast로, Flag=0이면 Unicast로 보내게 된다.  
+
+DHCP 서버가 자기 여기 있다고 응답하는 메시지이다. 단순히 DHCP 서버의 존재만을 알리는것이 아니라, 클라이언트에 할당할 IP주소 정보를 포함한 다양한 "네트워크 정보"를 함께 실어서 클라이언트에 전달한다.  
+
+#### 3) DHCP Request
+
+클라이언트 -> DHCP 서버, 브로드캐스트 메시지를 보낸다.  
+
+단말은 DHCP 서버(들)의 존재를 알았고, DHCP 서버가 단말에 제공할 네트워크 정보(IP주소, subnet mask, default gateway등)를 알았다. 이제 단말은 DHCP Request 메시지를 통해 __하나의 DHCP 서버를 선택하고 해당 서버에게 "단말이 사용할 네트워크 정보"를 요청한다.__  
+
+#### 4) DHCP Ack
+
+DHCP 서버 -> 클라이언트, 브로드캐스트 메세지 혹은 유니캐스트 메시지 (단말이 보낸 Flag에 따라)  
+
+DHCP 절차의 마지막 메시지로, DHCP 서버가 단말에게 "네트워크 정보"를 전달해 주는 메시지 이다.  
 
 ### DHCP의 장단점
 
@@ -355,9 +376,42 @@ __장점__ : PC수가 많거나 PC자체의 변동사항이 많을 경우 IP 설
 
 __단점__ : DHCP 서버에 의존하기 떄문에 서버가 다운되면 IP할당이 제대로 이루어지지않는다.  
 
-
 # What is a DNS server and the DNS protocol
+
+## DNS(Domain Name Service)
+
+`브라우징을 단순화하는 매우 특별한 목적을 수행하는 인터넷 상의 또다른 컴퓨터`  
+
+우리가 사용하는 사이트들을 IP주소로 기억해야 한다면 어려울것이다. 이를 해결해주기 위해 `www.google.com` 처럼 도메인으로 바꿔주는 시스템을 말한다. 주소창에 도메인을 입력하면 서버에서는 그 도메인에 맞는 IP를 찾아주는 방식이다. 이러한 DNS를 운영하는 서버를 __Name Server__ 라고 한다.  
+
+### DNS 절차
+
+1. 특정 사이트를 방문하기 위해 사용자가 브라우저에 URL을 입력한다.
+2. DNS에 접속하여 입력한 도메인 이름과 관련된 IP 주소를 요청한다.
+3. 획득한 IP 주소를 사용하여 브라우저는 그 컴퓨터와 통신하고 사용자로부터 요청된 특정 페이지를 요청할 수 있다.  
+
+<center><img src="https://d1.awsstatic.com/Route53/how-route-53-routes-traffic.8d313c7da075c3c7303aaef32e89b5d0b7885e7c.png"></img></center><br/>
+
 # What are the rules to make 2 devices communicate using IP addresses
+
+OSI 모델 / TCP/IP 모델이 있다
+
 # How does routing work with IP
+
 # What is a default gateway for routing
+
+통신시 목적지를 찾기위해 네부 네트워크를 먼저 찾는데, 이것이 없을 경우 default gateway를 통해 외부 네트워크에서 목적지를 찾는다. __다른 네트워크로 통하는 Access Point__ 이다.  
+
+```
+- 네트워크에서는 라우터 없이도 통신이 가능하다
+- 기본적으로는 가능한 호스트 중 가장 첫번째이다
+```
+
 # What is a port from an IP point of view and what is it used for when connecting to another device
+
+### 포트
+각각의 IP는 여러 포트를 가지고 있다. 인터넷에서 무언가 들어올 수 있는 통로가 각각의 컴퓨터(혹은 기기)마다 여러개 있다고 생각할 수 있다. 그리고 우리의 Router 또한 포트가 여러개 있는데, 이때 우리가 사용하는 Router의 특정 포트 번호로 들어오는 데이터를 LAN에 연결된 다른 IP주소의 특정 포트로 보내도록 지시하는 것이 __포트 포워딩__ 이다.  
+
+- 포트는 기본적으로 0 ~ 65535 로 구성되어 있다.
+- IP 주소와 Port를 이용해 특정 컴퓨터의 프로그램에 접근할 수 있다.
+- 운영 체제 통신의 종단점이다.
