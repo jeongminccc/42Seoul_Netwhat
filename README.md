@@ -244,7 +244,7 @@ __세션을 종료하기위한 과정__ 을 의미한다.
 - __문제해결이 쉬워짐__ : 계층별로 구분을 해둬 어느부분에서 문제가 생겼는지 파악이 쉽다.
 - __표준화__ : 네트워크의 초창기 각 장비회사에선 서로 다른 프로토콜을 이용했는데 OSI model을 통해 서로 같은 프로토콜을 사용하게 되고 타 회사간 장비의 통신이 가능해졌다.
 
-<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcijRJX%2FbtqAgTUAX4u%2FMiSobdh9uTZ3ByAHAasix1%2Fimg.png" width="350px" height="400px"></img>
+<img src="https://image.ahnlab.com/info/securityinfo/upload_/net_0506_08.gif" width="350px" height="400px"></img>
 <img src="https://img.router-switch.com/media/wysiwyg/Help-Center-FAQ/Router/network-layer-protocols.jpg" width="430px" height="330px"></img><br/>
 
 ### __7계층 : 응용계층 (Application Layer)__
