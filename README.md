@@ -88,7 +88,7 @@ Class C -> 네트워크.네트워크.네트워크.호스트
 
 ```
 그냥 새로운 네트워크를 할당받으면 되지 않을까?  
--> 결국 IPv4의 고갈과도 관련이 있다. 앞서 설명한 LAN, NAT 또한 부족한 IPv4 주소를 어떻게든 모든   기기가 사용하여 인터넷에 연결하기 위한 방법 중 하나이듯, 서브넷도 마찬가지 이다.  
+-> 결국 IPv4의 고갈과도 관련이 있다. 앞서 설명한 LAN, NAT 또한 부족한 IPv4 주소를 어떻게든 모든 기기가 사용하여 인터넷에 연결하기 위한 방법 중 하나이듯, 서브넷도 마찬가지 이다.  
 ```
 
 ## 서브넷 마스크
@@ -306,12 +306,12 @@ OSI 참조 모델은 말 그대로 참조 모델일 뿐 실제 사용되는 인�
 
 TCP/IP는 인터넷 프로토콜 중 가장 중요한 역할을 하는 TCP와 IP의 합성어로 데이터의 흐름 관리, 정확성 확인, 패킷의 목적지 보장을 담당한다. __데이터의 정확성 확인은 TCP가, 패킷을 목적지까지 전송하는 일은 IP가 담당한다.__   <br/>
 
-<center><img src="https://madplay.github.io/img/post/2018-02-04-network-tcp-udp-tcpip-1.png
+<center><img src="https://image.ahnlab.com/info/securityinfo/upload_/net_0506_08.gif
 "></img></center><br/>
 
 데이터는 아래 그림과 같이 단계별로 헤더(Data -> Segment -> Datagram -> Frame)을 붙여 전송하며 이를 `데이터 캡슐화`라고 한다.  
 
-<center><img src="https://t1.daumcdn.net/cfile/tistory/27786B485715047219
+<center><img src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile22.uf.tistory.com%2Fimage%2F99803C415BA2F07C069823
 "></img></center><br/>
 
 # What is a DHCP server and the DHCP protocol
@@ -340,14 +340,14 @@ DHCP가 설정해주는 주소 정보들은 아래와 같다.
 
 시스템 시작시 DHCP서버에 자신의 시스템을 위한 IP주소를 요청하고 그를 통해 TCP/IP 설정을 초기화 한 후 다른 호스트와 TCP/IP를 사용해서 통신을 할 수 있게 된다.  
 
-<center><img src="https://t1.daumcdn.net/cfile/tistory/2519193C5715E03427
+<center><img src="https://1.bp.blogspot.com/-y4NqGSGK0r8/XYRQwIeYIiI/AAAAAAAACOA/yxXGKYtmX_Ybu9CITlyBJ9aSAoms3g9DgCLcBGAsYHQ/s640/%25EC%25BA%25A1%25EC%25B2%2598.JPG
 "></img></center><br/>
 
 ### DHCP 임대 절차
 
 IP 주소 할당 절차에 사용되는 DHCP 메시지는 아래 그림과 같이 4개의 메세지로 구성되어 있다.  
 
-<center><img src="https://lh5.googleusercontent.com/kOITXoaKRPVHm9mukDqihbpiiCmv9e4DFFbp3ASRWOETsg69sqJfnv6AkRHpVgyn4YsQ7VpFm3d1rxkapCYeTqUbGWx6SaDojhFfv1umhRbDvO190Zr3tuLjuwDHJO4D2rsdOYZu
+<center><img src="https://www.netmanias.com/ko/?m=attach&no=1987
 "></img></center><br/>
 
 1. DHCP Discover
