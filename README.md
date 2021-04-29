@@ -244,7 +244,7 @@ __세션을 종료하기위한 과정__ 을 의미한다.
 - __문제해결이 쉬워짐__ : 계층별로 구분을 해둬 어느부분에서 문제가 생겼는지 파악이 쉽다.
 - __표준화__ : 네트워크의 초창기 각 장비회사에선 서로 다른 프로토콜을 이용했는데 OSI model을 통해 서로 같은 프로토콜을 사용하게 되고 타 회사간 장비의 통신이 가능해졌다.
 
-<img src="https://image.ahnlab.com/info/securityinfo/upload_/net_0506_08.gif" width="350px" height="400px"></img>
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcijRJX%2FbtqAgTUAX4u%2FMiSobdh9uTZ3ByAHAasix1%2Fimg.png" width="350px" height="400px"></img>
 <img src="https://img.router-switch.com/media/wysiwyg/Help-Center-FAQ/Router/network-layer-protocols.jpg" width="430px" height="330px"></img><br/>
 
 ### __7계층 : 응용계층 (Application Layer)__
@@ -306,13 +306,11 @@ OSI 참조 모델은 말 그대로 참조 모델일 뿐 실제 사용되는 인�
 
 TCP/IP는 인터넷 프로토콜 중 가장 중요한 역할을 하는 TCP와 IP의 합성어로 데이터의 흐름 관리, 정확성 확인, 패킷의 목적지 보장을 담당한다. __데이터의 정확성 확인은 TCP가, 패킷을 목적지까지 전송하는 일은 IP가 담당한다.__   <br/>
 
-<img src="https://image.ahnlab.com/info/securityinfo/upload_/net_0506_08.gif
-"></img><br/>
+<center><img src="https://image.ahnlab.com/info/securityinfo/upload_/net_0506_08.gif"></img></center><br/>
 
 데이터는 아래 그림과 같이 단계별로 헤더(Data -> Segment -> Datagram -> Frame)을 붙여 전송하며 이를 `데이터 캡슐화`라고 한다.  
 
-<center><img src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile22.uf.tistory.com%2Fimage%2F99803C415BA2F07C069823
-"></img></center><br/>
+<center><img src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile22.uf.tistory.com%2Fimage%2F99803C415BA2F07C069823"></img></center><br/>
 
 # What is a DHCP server and the DHCP protocol
 
@@ -340,15 +338,13 @@ DHCP가 설정해주는 주소 정보들은 아래와 같다.
 
 시스템 시작시 DHCP서버에 자신의 시스템을 위한 IP주소를 요청하고 그를 통해 TCP/IP 설정을 초기화 한 후 다른 호스트와 TCP/IP를 사용해서 통신을 할 수 있게 된다.  
 
-<center><img src="https://1.bp.blogspot.com/-y4NqGSGK0r8/XYRQwIeYIiI/AAAAAAAACOA/yxXGKYtmX_Ybu9CITlyBJ9aSAoms3g9DgCLcBGAsYHQ/s640/%25EC%25BA%25A1%25EC%25B2%2598.JPG
-"></img></center><br/>
+<center><img src="https://1.bp.blogspot.com/-y4NqGSGK0r8/XYRQwIeYIiI/AAAAAAAACOA/yxXGKYtmX_Ybu9CITlyBJ9aSAoms3g9DgCLcBGAsYHQ/s640/%25EC%25BA%25A1%25EC%25B2%2598.JPG"></img></center><br/>
 
 ### DHCP 임대 절차
 
 IP 주소 할당 절차에 사용되는 DHCP 메시지는 아래 그림과 같이 4개의 메세지로 구성되어 있다.  
 
-<center><img src="https://www.netmanias.com/ko/?m=attach&no=1987
-"></img></center><br/>
+<center><img src="https://www.netmanias.com/ko/?m=attach&no=1987"></img></center><br/>
 
 1. DHCP Discover
 ㄴㅇㅁㄴㅇ
