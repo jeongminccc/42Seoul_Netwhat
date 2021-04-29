@@ -415,3 +415,32 @@ OSI 모델 / TCP/IP 모델이 있다
 - 포트는 기본적으로 0 ~ 65535 로 구성되어 있다.
 - IP 주소와 Port를 이용해 특정 컴퓨터의 프로그램에 접근할 수 있다.
 - 운영 체제 통신의 종단점이다.
+
+# Ping (Packet Internet Groper)
+
+컴퓨터 네트워크 상태를 점검, 진단하는 명령이다.  
+
+ping 명령의 기본적인 작동원리는 네트워크 상태를 확인하려는 target 컴퓨터를 향해 일정 크기의 패킷을 __보낸 후(ICMP echo request)__ target 컴퓨터가 이에 대해 __응답하는 메시지(ICMP echo reply)__ 를 보내면 이를 수신, 분석하여 대상 컴퓨터가 작동하는지, 또는 대상 컴퓨터까지 도달하는 네트워크 상태가 어떠한지 파악할 수 있다.  
+
+ping 명령은 TCP/IP 프로토콜중 ICMP(Internet Control Message Protocol)을 통해 동작하므로, 이 프로토콜을 지원하지 않는 기기를 대상으로 ping 수행할 수 없다.  
+
+# SMTP (Simple Mail Transfer Protocol)
+
+인터넷에서 메일을 주고 받기 위한 전송규약 및 프로토콜이다.  
+
+Application Layer의 프로토콜   
+
+[자세한 설명](https://programming119.tistory.com/152)
+
+# FTP (File Transfer Protocol)
+
+
+파일 송수신 프로토콜, 하나의 호스트에서 다른 호스트로 파일을 복사 하기위해 TCP/IP에 의해 제공되는 표준 기능이다.  
+
+[자세한 설명](https://m.blog.naver.com/hdj20/40155944026)
+
+# HTTP (HyperText Transfer Protocol)
+
+텍스트 기반의 통신 규약으로 인터넷에서 데이터를 주고받을 수 있는 프로토콜이다.  
+
+[자세한 설명](https://velog.io/@surim014/HTTP%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80)
