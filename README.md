@@ -306,8 +306,8 @@ OSI 참조 모델은 말 그대로 참조 모델일 뿐 실제 사용되는 인�
 
 TCP/IP는 인터넷 프로토콜 중 가장 중요한 역할을 하는 TCP와 IP의 합성어로 데이터의 흐름 관리, 정확성 확인, 패킷의 목적지 보장을 담당한다. __데이터의 정확성 확인은 TCP가, 패킷을 목적지까지 전송하는 일은 IP가 담당한다.__   <br/>
 
-<center><img src="https://image.ahnlab.com/info/securityinfo/upload_/net_0506_08.gif
-"></img></center><br/>
+<img src="https://image.ahnlab.com/info/securityinfo/upload_/net_0506_08.gif
+"></img><br/>
 
 데이터는 아래 그림과 같이 단계별로 헤더(Data -> Segment -> Datagram -> Frame)을 붙여 전송하며 이를 `데이터 캡슐화`라고 한다.  
 
